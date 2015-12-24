@@ -6,10 +6,11 @@ int countChars (char* sentence) {
         int count[256] = {0};
         int uniqueCharCount;
         int i;
-        for (i = 0; i < strlen(sentence); i++) {
+	char c;
+        for (i = 0; (c = sentence[i]) != '\0'; i++) {
 
-                if (!count[sentence[i]]) {
-                        count[sentence[i]] = 1;
+                if (!count[c]) {
+                        count[c] = 1;
                         uniqueCharCount++;
                 }
         }
